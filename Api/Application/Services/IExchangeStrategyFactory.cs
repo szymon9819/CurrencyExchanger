@@ -1,4 +1,4 @@
-using Api.Application.Services.Exchange;
+using Api.Application.Services.Exchange.Strategies;
 
 namespace Api.Application.Services;
 

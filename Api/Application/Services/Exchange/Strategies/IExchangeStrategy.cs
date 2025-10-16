@@ -1,6 +1,6 @@
 using Api.Domain.ValueObjects;
 
-namespace Api.Application.Services.Exchange;
+namespace Api.Application.Services.Exchange.Strategies;
 
 public interface IExchangeStrategy
 {

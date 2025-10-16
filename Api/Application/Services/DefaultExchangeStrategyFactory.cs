@@ -1,4 +1,5 @@
 using Api.Application.Services.Exchange;
+using Api.Application.Services.Exchange.Strategies;
 
 namespace Api.Application.Services;
 
@@ -21,7 +22,7 @@ public sealed class DefaultExchangeStrategyFactory : IExchangeStrategyFactory
 
         if (sourceAmount >= HighValueThreshold)
             return new PercentOnTargetStrategy(_options.PercentHighValue);
-
-        return new PercentOnTargetStrategy(_options.PercentStandard);
+        
+        return new PercentAndFlatFeeOnSourceStrategy(_options.PercentStandard, _options.FlatFeeSmallTxn);
     }
 }
